@@ -1,0 +1,68 @@
+.artist-details-modal {
+    overflow: auto;
+    h2 {
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        border-bottom: 2px solid #1ed760;
+        padding-bottom: 0.4em;
+        font-size: 1.2em;
+    }
+    .modal-content {
+        background-color: rgba($color: #000000, $alpha: .6);
+    }
+    .event-field {
+        margin: 1em;
+        .label {
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 100;
+            margin-bottom: 0.3em;
+            opacity: .8;
+        }
+    }
+    .actions {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        font-size: 2em;
+        padding: .5em;
+        &>* {
+            cursor: pointer;
+            opacity: .5;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    .favorit {
+        display: flex;
+        align-items: center;
+    }
+    .offer {
+        a {
+            text-decoration: underline;
+            color: White;
+            padding: 0.4em;
+            display: block;
+        }
+    }
+}
+
+.grid-header-footer-con {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 'header''main''footer';
+    width: calc(100% - 2px);
+    height: 100%;
+    .haeder {
+        grid-area: header;
+    }
+    .main {
+        grid-area: main;
+        overflow: auto;
+    }
+    .footer {
+        grid-area: footer;
+    }
+}
